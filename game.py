@@ -8,13 +8,12 @@ TITLE = '---=== SPACE INVADERS ===---'
 PADDING = 40
 
 CANNON_SPEED = 5
-CANNON_FIRING_INTERVAL = 300
+CANNON_FIRING_INTERVAL = 3
 
-BULLET_SPEED = 500000000000000000000000000000000000000000000000000000000000
-
+BULLET_SPEED = 50
 ALIEN_MAX_MOVEMENT = 40
-ALIEN_X_SPEED = 1
-ALIEN_Y_SPEED = 7
+ALIEN_X_SPEED = 7
+ALIEN_Y_SPEED = 8
 ALIEN_LIVES = 1
 LEFTMOST_ALIEN_X = 60
 TOP_ALIEN_Y = 40
@@ -55,7 +54,7 @@ class Bullet(Actor):
     def __init__(self, sprite, position):
         super(Bullet, self).__init__(sprite, position)
         self.speed = BULLET_SPEED
-  
+
     def update(self):
         self.y -= self.speed
 
